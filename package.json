@@ -1,0 +1,12 @@
+{
+  "name": "user-accounts",
+  "private": true,
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "start": "concurrently -n server,client \"npm start -w server\" \"npm start -w client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
